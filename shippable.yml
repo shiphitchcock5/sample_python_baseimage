@@ -3,7 +3,6 @@ language: python
 
 python:
   - 3.3
-  
 
 install:
   - pip install -r requirements.txt
@@ -18,3 +17,4 @@ script:
   - coverage run `which nosetests` test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
   - coverage xml -o shippable/codecoverage/coverage.xml
 
+cache: true
